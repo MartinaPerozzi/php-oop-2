@@ -24,11 +24,13 @@ require_once __DIR__ . "/products-folder/product-list.php";
 
 <body>
     <div>
-        <section <?php foreach ($products_food as $product_food) { ?>>
-            <h1> Food </h1>
-            <h4><?= $product_food->name ?></h4>
-            <p><?= $product_food->description ?></p>
-            <span><?= $product_food->price ?>€ </span>
+        <section>
+            <h1> Dog Food </h1>
+            <div <?php foreach ($products_food as $product_food) { ?>>
+                <h4><?= $product_food->name ?></h4>
+                <p><?= $product_food->description ?></p>
+                <span><?= $product_food->price ?>€ </span>
+            </div>
 
 
         </section <?php } ?>>
