@@ -7,15 +7,22 @@ class Product
     public $name;
     public $description;
     public $price;
-    public $arraycategories;
+    public $category;
 
 
     // Mi passo le variabili con un costruttore e specifico il TIPO di dato per evitare problemi futuri
-    public function __construct(string $_name, string $_description, int $_price, array $_arraycategories)
+    public function __construct(string $_name, string $_description, float $_price, Categorie $_category)
     {
         $this->name = $_name;
         $this->description = $_description;
         $this->price = $_price;
-        $this->arraycategories = $_arraycategories;
+        $this->category = $_category;
+    }
+    public function setName($name)
+    {
+        if (!is_string($name) || $name === "") return false;
+        $this->name = $name;
+
+        return $this;
     }
 }
